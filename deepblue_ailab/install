@@ -1,0 +1,26 @@
+#!/bin/bash
+git clone https://github.com/ROM-robotics/tmux_install
+cd ./tmux_install
+chmod +x start.sh
+./start.sh
+#cp .tmuxinator.yml ../rom.yml
+cd ..
+rm -rf tmux_install
+echo "!#/bin/bash" > the_hacker_way
+echo "cd ~" >> the_hacker_way
+echo "tmuxinator" >> the_hacker_way
+chmod +x the_hacker_way
+sudo mv the_hacker_way /usr/bin/
+
+if [[ -e ~/.config/neofetch/config.conf ]]
+then
+    rm ~/.config/neofetch/config.conf
+fi
+cp ./config/config.conf ~/.config/neofetch/
+
+if [[ -e /usr/bin/neofetch ]]
+then
+    sudo rm /usr/bin/neofetch
+fi
+sudo cp ./config/neofetch /usr/bin/neofetch
+sudo /usr/bin/neofetch
