@@ -1,6 +1,5 @@
 cmake_minimum_required(VERSION 3.8)
-project(black_dount_description)
-
+project(chefbot_description)
 
 if(CMAKE_COMPILER_IS_GNUCXX OR CMAKE_CXX_COMPILER_ID MATCHES "Clang")
   add_compile_options(-Wall -Wextra -Wpedantic)
@@ -25,11 +24,12 @@ if(BUILD_TESTING)
 endif()
 
 install(DIRECTORY
-  config
-	launch
-	urdf
-	meshes
-	DESTINATION share/${PROJECT_NAME}
+  launch
+  meshes
+  robots
+  urdf
+  DESTINATION share/${PROJECT_NAME}/
 )
+
 
 ament_package()

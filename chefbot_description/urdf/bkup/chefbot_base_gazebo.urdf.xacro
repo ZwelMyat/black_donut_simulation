@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 
-<robot name="black_donut" xmlns:xacro="http://ros.org/wiki/xacro">
-  <xacro:macro name="black_donut">
-	  <gazebo reference="black_dount_wheel_left_link">
+<robot name="kobuki_sim" xmlns:xacro="http://ros.org/wiki/xacro">
+  <xacro:macro name="kobuki_sim">
+	  <gazebo reference="wheel_left_link">
 	    <mu1>1.0</mu1>
 	    <mu2>1.0</mu2>
 	    <kp>1000000.0</kp>
@@ -11,7 +11,7 @@
 	    <maxVel>1.0</maxVel>
 	  </gazebo>
 	
-	  <gazebo reference="black_dount_wheel_right_link">
+	  <gazebo reference="wheel_right_link">
 	    <mu1>1.0</mu1>
 	    <mu2>1.0</mu2>
 	    <kp>1000000.0</kp>
@@ -20,7 +20,7 @@
 	    <maxVel>1.0</maxVel>
 	  </gazebo>
 	  
-	  <gazebo reference="black_dount_caster_front_link">
+	  <gazebo reference="caster_front_link">
 	    <mu1>0.0</mu1>
 	    <mu2>0.0</mu2>
 	    <kp>1000000.0</kp>
@@ -29,7 +29,7 @@
 	    <maxVel>1.0</maxVel>
 	  </gazebo>
 	  
-	  <gazebo reference="black_dount_caster_back_link">
+	  <gazebo reference="caster_back_link">
 	    <mu1>0.0</mu1>
 	    <mu2>0.0</mu2>
 	    <kp>1000000.0</kp>
