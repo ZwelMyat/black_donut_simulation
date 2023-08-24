@@ -12,7 +12,7 @@ import xacro
 
 def generate_launch_description():
     gazebo_pkg = get_package_share_directory('black_donut_gazebo')
-    description_pkg = get_package_share_directory('black_dount_description')
+    description_pkg = get_package_share_directory('black_donut_description')
     default_world_path = os.path.join(gazebo_pkg, 'worlds', 'cafe.world')
     
     bot = IncludeLaunchDescription(
