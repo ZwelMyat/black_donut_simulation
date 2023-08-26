@@ -44,7 +44,7 @@ def generate_launch_description():
             description='Use sim time if true'),
 
         robot_state_publisher_node,
-        joint_state_node,
-        rviz_node
+        #joint_state_node,
+        #rviz_node
 
     ])

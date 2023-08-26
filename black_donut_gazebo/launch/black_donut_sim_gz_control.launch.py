@@ -24,7 +24,7 @@ def generate_launch_description():
     rviz_node = Node(
         package='rviz2',
         executable='rviz2',
-        arguments=['-d', os.path.join(gazebo_pkg, 'rviz2', 'display.rviz')],
+        arguments=['-d', os.path.join(description_pkg, 'rviz', 'test_odom.rviz')],
         condition=IfCondition(LaunchConfiguration('open_rviz'))
     )
 
@@ -47,7 +47,7 @@ def generate_launch_description():
     spawn_robot_node = Node(
         package='gazebo_ros',
         executable='spawn_entity.py',
-        arguments=['-entity', 'black_donut_base', '-topic', '/robot_description',
+        arguments=['-entity', 'black_donut', '-topic', '/robot_description',
         #arguments=["-database", "black_donut_tall", '-entity', 'black_donut',
         "-x", '0.0',
         "-y", '0.0',
@@ -60,7 +60,7 @@ def generate_launch_description():
             DeclareLaunchArgument('open_rviz', default_value='true', description='Open RViz.'),
             bot,
             gazebo_launch,
-            #rviz_node,
+            rviz_node,
             spawn_robot_node,
         ]
     )
