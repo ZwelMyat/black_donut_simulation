@@ -7,7 +7,7 @@ def generate_launch_description():
     return LaunchDescription([
         launch_ros.actions.Node(
           parameters=[
-            get_package_share_directory("slam_toolbox") + '/config/mapper_params_localization.yaml'
+            get_package_share_directory("black_donut_slam") + '/config/mapper_params_localization.yaml'
           ],
           package='slam_toolbox',
           executable='localization_slam_toolbox_node',
