@@ -32,7 +32,7 @@ def generate_launch_description():
     rviz_node = Node(
         package='rviz2',
         executable='rviz2',
-        arguments=['-d', os.path.join(description_pkg, 'rviz', 'test_odom.rviz')],
+        arguments=['-d', os.path.join(description_pkg, 'rviz', 'slam.rviz')],
         condition=IfCondition(LaunchConfiguration('open_rviz'))
     )
 
