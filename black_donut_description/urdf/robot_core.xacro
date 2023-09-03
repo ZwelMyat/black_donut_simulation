@@ -51,6 +51,33 @@
             <origin xyz="0 0 0.075" rpy="0 0 0"/>
         </xacro:inertial_box>
     </link>
+
+    <!-- TOP PLATE-->
+    <joint name="hat_joint" type="fixed">
+        <parent link="base_link"/>
+        <child link="hat_link"/>
+        <origin xyz="0 0 0"/>
+    </joint>
+
+    <link name="hat_link">
+        <visual>
+            <origin xyz="0 0 0.245"/>
+            <geometry>
+                <cylinder radius="0.2" length="0.01"/>
+            </geometry>1
+            <material name="black"/>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0.245"/>
+            <geometry>
+                <box size="0.3 0.3 0.15"/>
+            </geometry>
+        </collision>
+        <xacro:inertial_box mass="0.1" x="0.1" y="0.1" z="0.1">
+            <origin xyz="0 0 0.245" rpy="0 0 0"/>
+        </xacro:inertial_box>
+    </link>
+    
     
     <!-- LEFT WHEEL LINK -->
 
