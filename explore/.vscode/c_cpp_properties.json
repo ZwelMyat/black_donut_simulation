@@ -1,0 +1,27 @@
+{
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "${default}",
+        "limitSymbolsToIncludedHeaders": false
+      },
+      "includePath": [
+        "/home/zyme/ros_ws/explore_lite/install/multirobot_map_merge/include/**",
+        "/home/zyme/ros_ws/explore_lite/install/explore_lite/include/**",
+        "/home/zyme/ros_ws/rom2109/install/teleop_twist_joy/include/**",
+        "/home/zyme/ros_ws/rom2109/install/diffdrive_stm32/include/**",
+        "/opt/ros/humble/include/**",
+        "/home/zyme/ros_ws/explore_lite/src/m-explore-ros2/explore/include/**",
+        "/home/zyme/ros_ws/explore_lite/src/m-explore-ros2/map_merge/include/**",
+        "include/**",
+        "/usr/include/**"
+      ],
+      "name": "ROS",
+      "intelliSenseMode": "gcc-x64",
+      "compilerPath": "/usr/bin/gcc",
+      "cStandard": "gnu11",
+      "cppStandard": "c++14"
+    }
+  ],
+  "version": 4
+}
